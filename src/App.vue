@@ -136,7 +136,7 @@ const handleDeleteItem = async () => {
 };
 
 const handleSave = async () => {
-  if (!payer.value || !payAmount.value) return;
+  if (!payer.value || !payAmount.value || payDate.value) return;
   if (isEditMode.value) {
     await setDoc(doc(db, "Accounting", itemEditId.value), {
       payDate: payDate.value,
