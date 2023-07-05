@@ -203,10 +203,17 @@ getData();
           ></v-combobox>
         </v-toolbar-title>
         <v-divider class="mx-4" inset vertical></v-divider>
-        <v-spacer></v-spacer>
         <v-dialog v-model="isShowDialog" max-width="500px">
           <template v-slot:activator="{ props }">
-            <v-btn color="primary" dark class="mb-2" v-bind="props">
+            <v-btn
+              color="primary"
+              variant="outlined"
+              dark
+              class="mb-2"
+              v-bind="props"
+              width="150"
+              height="70%"
+            >
               Thêm mới
             </v-btn>
           </template>
