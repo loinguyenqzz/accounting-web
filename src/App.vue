@@ -177,8 +177,8 @@ watch([currentWeek, allData], () => {
   console.log(currentWeek.value.value);
   items.value = allData.value.filter((data) => {
     const time = data.payDate.seconds;
-    return currentWeek.value.value == moment.unix(time).isoWeek();
-  });
+    return currentWeek.value.value == moment.unix(time).isoWeek() && moment.unix(time).year() == moment().year();
+  });git 
 });
 getUsers();
 getData();
